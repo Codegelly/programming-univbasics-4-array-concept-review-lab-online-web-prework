@@ -13,7 +13,7 @@ end
 
 def find_max_value(array)
   result = 0;
-  array.each(|i| result = i > result ? i : result)
+  array.each(|i| { result = i > result ? i : result })
   
   return result
 end
