@@ -13,7 +13,15 @@ end
 
 def find_max_value(array)
   result = nil
-  array.each {|i|  result = i > result ? i : result }
+  array.each {|i|
+    if result == nil
+      result = i
+    end
+    
+    if result > i
+      result = i
+    end
+  }
   
   return result
 end
